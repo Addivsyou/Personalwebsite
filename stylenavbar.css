@@ -1,0 +1,228 @@
+/* Navbar */
+.navbar {
+    background-color: var(--bg-color-dark-sidebar);
+    color: var(--text-color-dark);
+}
+
+/* Per rendere la navbar piena larghezza */
+.navbar .container-fluid {
+    padding: 0;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Icona personalizzata */
+.navbar-toggler-icon {
+    font-size: 1.5rem;
+}
+
+.card-body {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.085);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-body:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.427);
+}
+
+/* Sidebar */
+#sidebar {
+    background-color: var(--bg-color-dark-sidebar);
+    color: var(--text-color-dark);
+    height: 100vh;
+    /* Sidebar riempie l'altezza della finestra */
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    /* Aggiunge scrollbar verticale se necessario */
+    padding-bottom: 20px;
+}
+
+/* Nav-link per la sidebar */
+.nav-link {
+    color: white;
+    opacity: 0.6;
+    font-size: 1.2rem;
+}
+
+.navlink {
+    color: white;
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+.en {
+    color: white;
+    opacity: 0.4;
+}
+
+.it {
+    color: white;
+    opacity: 0.4;
+}
+
+@media (min-width: 768px) {
+    .nav-link:hover {
+        background-color: #1f2c39;
+        opacity: 1;
+        border-radius: 8px;
+        color: #17a2b8;
+        transform: scale(1.15);
+    }
+
+    .nav-link.active {
+        color: #17a2b8;
+        font-size: 1.35rem;
+        opacity: 1;
+        font-weight: 600;
+    }
+}
+
+.nav-link:hover {
+    background-color: #1f2c39;
+    opacity: 1;
+    border-radius: 8px;
+    color: #17a2b8;
+}
+
+.nav-link.active {
+    color: #17a2b8;
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* Responsività della sidebar per altezze ridotte */
+@media (max-width: 800px) {
+    #sidebar {
+        padding-top: 10px;
+        /* Riduce il padding superiore */
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        /* Riduce la dimensione del testo */
+        padding: 8px 5px;
+        /* Riduce il padding dei link */
+    }
+
+    #sidebar .text-center img {
+        width: 80px;
+        /* Riduce la dimensione dell'immagine del profilo */
+        height: 80px;
+    }
+
+    #sidebar .text-center h5 {
+        font-size: 1rem;
+        /* Riduce il nome utente */
+    }
+
+    #sidebar .text-center p {
+        font-size: 0.85rem;
+        /* Riduce la descrizione del profilo */
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Ulteriore riduzione per schermi più piccoli */
+    #sidebar {
+        padding-top: 5px;
+        /* Riduce ulteriormente il padding superiore */
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        /* Ulteriore riduzione del testo */
+        padding: 6px 4px;
+        /* Riduce ulteriormente il padding */
+    }
+
+    #sidebar .text-center img {
+        width: 60px;
+        /* Riduce ancora di più l'immagine del profilo */
+        height: 60px;
+    }
+
+    #sidebar .text-center h5 {
+        font-size: 0.9rem;
+        /* Riduce ulteriormente il nome utente */
+    }
+
+    #sidebar .text-center p {
+        font-size: 0.75rem;
+        /* Riduce ulteriormente la descrizione del profilo */
+    }
+}
+
+/* Main overflow */
+main {
+    background-color: var(--bg-color-dark-main);
+    color: var(--text-color-dark);
+    position: relative;
+    height: auto;
+}
+
+/* Assicurarsi che il layout occupi l'intera altezza della finestra */
+html,
+body {
+    height: 100%;
+}
+
+/* Bottone */
+#bottone {
+    color: #17a2b8;
+    background-color: #333333;
+    border-color: #333333;
+    font-weight: 750;
+}
+
+#bottone:hover {
+    background-color: #1f2c39;
+    opacity: 1;
+    color: white;
+    box-shadow: 3em;
+}
+
+#bottone1 {
+    color: #17a2b8;
+    background-color: #333333;
+    border-color: #333333;
+    font-weight: 750;
+}
+
+#bottone1:hover {
+    background-color: #1f2c39;
+    opacity: 1;
+    color: white;
+    box-shadow: 3em;
+}
+
+/* Container e row */
+.container-fluid {
+    height: auto;
+}
+
+.row {
+    height: auto;
+}
+
+/* Link generici */
+a {
+    color: var(--text-color-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #cccccc;
+}
+
+a.nav-link {
+    padding: 12px 12px;
+}

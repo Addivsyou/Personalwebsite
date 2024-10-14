@@ -1,0 +1,491 @@
+:root {
+    --bg-color-dark-sidebar: #222222;
+    --bg-color-dark-main: #333333;
+    --text-color-dark: #ffffff;
+}
+
+html {
+    background-color: #222222;
+}
+
+/* Tema scuro fisso */
+body {
+    background-color: var(--bg-color-dark-main);
+    color: var(--text-color-dark);
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden !important;
+    padding: 0;
+    width: 100%; /* Impedisce che il body ecceda la larghezza del viewport */
+}
+
+/* Video background and container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    /* Altezza del video a 60% della viewport */
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+.overlay-content {
+    text-align: center;
+    color: #ffffff;
+    z-index: 3;
+}
+
+.overlay-content h1 {
+    font-size: 2.5rem;
+}
+
+.overlay-content p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Sezione descrittiva sotto l'overlay */
+.description {
+    z-index: 3;
+    position: relative;
+    padding: 2rem;
+    background-color: var(--bg-color-dark-main);
+    color: var(--text-color-dark);
+    text-align: center;
+    margin-top: -4rem;
+}
+
+.description h2 {
+    color: #17a2b8;
+}
+
+.description p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Ottimizzazione per dispositivi mobili */
+@media (max-width: 768px) {
+    #sidebar {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        background-color: var(--bg-color-dark-sidebar);
+        color: var(--text-color-dark);
+    }
+
+    .video-container {
+        height: 60vh;
+    }
+
+    .overlay-content h1 {
+        font-size: 2rem;
+    }
+
+    .overlay-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .overlay-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .overlay-content p {
+        font-size: 0.9rem;
+    }
+
+    .description h2 {
+        font-size: 1.5rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+    }
+}
+
+.card-hover:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    /* Aggiunge ombreggiatura più intensa */
+    transform: translateY(-5px);
+    /* Leggero spostamento verso l'alto */
+}
+
+footer ul li a li {
+    color: #ffffff;
+}
+
+
+
+
+
+
+/* Card pagina index */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    /* Allinea le card alla stessa altezza */
+}
+
+.card-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    /* Centra orizzontalmente il contenuto */
+    height: 100%;
+    /* Assicura che le card riempiano tutta l'altezza disponibile */
+    text-align: center;
+    /* Assicura che le card riempiano tutta l'altezza disponibile */
+}
+
+
+
+
+
+/* Make images have a 16:9 aspect ratio */
+.carousel-inner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Set a fixed aspect ratio for the carousel */
+.carousel-inner {
+    aspect-ratio: 16 / 9;
+    max-height: calc(100vh - 100px);
+    /* Optional: restricts height */
+}
+
+/* Overlay dark layer */
+.carousel-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-overlay img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    /* Adjust this value to move the text upwards */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    /* Place captions on top of the overlay */
+    text-align: center;
+    color: #fff;
+    /* Ensure text is visible on dark overlay */
+    max-width: 90%;
+    /* Limit width on larger screens */
+    width: 100%;
+    /* Use full width on small screens */
+    padding: 10px;
+    /* Add some padding for readability */
+    border-radius: 5px;
+    /* Optional: rounded corners */
+}
+
+/* Responsive adjustments for captions on small screens */
+@media (max-width: 576px) {
+    .carousel-caption {
+        bottom: 5%;
+        /* Adjust the position for smaller screens */
+        padding: 15px 20px;
+        /* Add more padding for readability */
+        font-size: 0.8rem;
+        /* Increase font size for better readability */
+        max-width: 95%;
+        /* Use more width on small screens */
+        width: auto;
+        /* Ensure proper width */
+    }
+}
+
+@media (max-width: 430) {
+    #test1 {
+        font-size: 0.8rem
+    }
+    #test1 {
+        font-size: 0.5rem;
+    }
+
+
+}
+
+/*contatti*/
+
+
+.image-container {
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 1%;
+    background: linear-gradient(to top, rgba(0, 0, 0), transparent);
+    z-index: 2;
+}
+
+.image-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenitore del testo in basso */
+.bottom-text-container {
+    position: absolute;
+    bottom: 10px;
+    /* Posiziona il testo vicino al bordo inferiore */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    color: #fff;
+    /* Colore del testo */
+    width: 90%;
+    /* Larghezza delle colonne */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-text-container .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    /* Spazio tra le colonne */
+}
+
+.bottom-text-container .col {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Stile per le icone */
+.icon-link {
+    display: block;
+    color: #fff;
+    margin-bottom: 10px;
+    /* Spazio tra l'icona e il testo */
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    color: #ddd;
+    /* Colore hover */
+}
+
+.form-control {
+    background: rgba(34, 34, 34, 0.8);
+    /* Sfondo nero (#222) con opacità per sfocatura */
+    color: #f2f2f2;
+    /* Colore del testo */
+    border: 1px solid #111;
+    /* Bordo per evidenziare il campo */
+    backdrop-filter: blur(8px);
+    /* Effetto sfocatura */
+    -webkit-backdrop-filter: blur(8px);
+    /* Effetto sfocatura per Safari */
+    border-radius: 8px;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+    /* Colore del placeholder per maggiore leggibilità */
+}
+
+/* prevemtivo */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+/* Effetti di animazione */
+.service-row,
+.service-text,
+.service-image img {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
+.service-row.in-view,
+.service-text.in-view,
+.service-image img.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Layout dei servizi */
+.service-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 40px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-text {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.service-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #17a2b8;
+    margin-bottom: 15px;
+}
+
+.service-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #fff;
+}
+
+/* Divider */
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #eaeaea;
+    margin: 40px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-row {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .service-row.reverse {
+        flex-direction: column;
+    }
+
+    .service-text {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .service-image img {
+        max-width: 100%;
+    }
+}
+
+.card {
+    border: none;
+    /* Rimuove il bordo */
+    background-color: #333;
+    /* Imposta il background a un colore scuro */
+    color: #fff;
+    /* Cambia il colore del testo per un tema scuro */
+}
+
+@media (max-width: 768px) {
+    #siac {
+        height: 120;
+    }
+}
+
+#bottones {
+    color: #17a2b8;
+    background-color: #222;
+    border-color: #222;
+    font-weight: 750;
+}
+
+#bottones:hover {
+    background-color: #1f2c39;
+    opacity: 1;
+    color: white;
+    box-shadow: 3em;
+}
