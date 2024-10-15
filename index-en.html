@@ -283,24 +283,6 @@
     <!-- Includi la libreria CryptoJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <script src="pas.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var video = document.getElementById('background-video');
-    
-    // Forza il video a essere muto (necessario per iOS)
-    video.muted = true;
-
-    // Aggiungi un evento che parte al caricamento dei dati del video
-    video.addEventListener('canplay', function() {
-        video.play();  // Forza il video a partire non appena è pronto
-    });
-
-    // Forza la riproduzione del video all'avvio della pagina
-    video.play().catch(function(error) {
-        console.log('Autoplay non consentito:', error);
-    });
-});
-</script>
 </body>
 
 </html>
