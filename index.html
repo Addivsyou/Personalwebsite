@@ -152,10 +152,11 @@
 
             <!-- Main content -->
 <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 container-fluid" style="padding: 0;">
-    <div class="video-container">
-        <video id="background-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+    <div class="video-container" style="position: relative; overflow: hidden;">
+        <video  id="background-video" autoplay muted loop class="video-bg" aria-label="Video presentazione" preload="auto" playsinline webkit-playsinline disablePictureInPicture controls="false">
             <source src="/media/video.mp4" type="video/mp4">
             <img src="fallback.jpg" alt="Immagine statica di sfondo" loading="lazy">
+            Your browser does not support video playback.
         </video>
 
         <!-- Overlay con testo di benvenuto -->
@@ -172,6 +173,7 @@
             </div>
         </div>
     </div>
+
                 <!-- Sezione descrittiva sotto l'overlay -->
                 <div class="container pb-5">
                     <div class="row">
