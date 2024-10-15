@@ -152,28 +152,27 @@
 
             <!-- Main content -->
             <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 container-fluid" style="padding: 0;">
-                <div class="video-container">
-                    <video autoplay muted loop class="video-bg" aria-label="Video presentazione" preload="auto"
-                        playsinline>
-                        <source src="/media/video.mp4" type="video/mp4">
-                        <img src="fallback.jpg" alt="Immagine statica di sfondo" loading="lazy">
-                        Your browser does not support video playback.
-                    </video>
+    <div class="video-container" style="position: relative; overflow: hidden;">
+        <video autoplay muted loop class="video-bg" aria-label="Video presentazione" preload="auto" playsinline webkit-playsinline disablePictureInPicture controls="false">
+            <source src="/media/video.mp4" type="video/mp4">
+            <img src="fallback.jpg" alt="Immagine statica di sfondo" loading="lazy">
+            Your browser does not support video playback.
+        </video>
 
-                    <!-- Overlay con testo di benvenuto -->
-                    <div class="overlay">
-                        <div class="p-5 mb-4 rounded-3" style="float: left; width: 100%;">
-                            <div class="container-fluid py-5">
-                                <h1 id="test1" class="display-5 fw-bold">Welcome to My Portfolio Site</h1>
-                                <p id="test2" class="col-md-8">On this site, you can find my professional information,
-                                    some of my projects, and the services I offer.<br>
-                                    If you are here because I sent you my CV, you will also have the password to
-                                    download it; just click the button below.</p>
-                                <button id="bottone1" class="btn btn-primary btn-lg" type="button">Download CV</button>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Overlay con testo di benvenuto -->
+        <div class="overlay">
+            <div class="p-5 mb-4 rounded-3" style="float: left; width: 100%;">
+                <div class="container-fluid py-5">
+                    <h1 id="test1" class="display-5 fw-bold">Welcome to My Portfolio Site</h1>
+                    <p id="test2" class="col-md-8">On this site, you can find my professional information,
+                        some of my projects, and the services I offer.<br>
+                        If you are here because I sent you my CV, you will also have the password to
+                        download it; just click the button below.</p>
+                    <button id="bottone1" class="btn btn-primary btn-lg" type="button">Download CV</button>
                 </div>
+            </div>
+        </div>
+    </div>
 
                 <!-- Sezione descrittiva sotto l'overlay -->
                 <div class="container pb-5">
