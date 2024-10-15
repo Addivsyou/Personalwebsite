@@ -37,6 +37,15 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
+    pointer-events: none; /* Il video non è interattivo */
+}
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
 }
 
 /* Overlay styling */
