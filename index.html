@@ -287,6 +287,15 @@
     <!-- Includi la libreria CryptoJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <script src="pas.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('background-video');
+    video.play().catch(function(error) {
+        // Gestisci l'errore se necessario
+        console.log('Errore nella riproduzione del video:', error);
+    });
+});
+</script>
 </body>
 
 </html>
