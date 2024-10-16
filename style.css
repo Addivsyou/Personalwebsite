@@ -27,7 +27,6 @@ body {
     /* Altezza del video a 60% della viewport */
     overflow: hidden;
     margin-bottom: 2rem;
-    background: url('/media/video.mp4') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -40,22 +39,6 @@ body {
     object-fit: cover;
     z-index: -1;
     /* Rimuovi pointer-events: none; se non necessario */
-}
-
-video::-webkit-media-controls {
-    display: none !important;
-}
-video {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-video::-webkit-media-controls-start-playback-button {
-    display: none !important;
 }
 
 /* Overlay styling */
