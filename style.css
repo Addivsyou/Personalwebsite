@@ -20,6 +20,7 @@ body {
 }
 
 /* Video background and container */
+/* Video background and container */
 .video-container {
     position: relative;
     width: 100%;
@@ -27,18 +28,16 @@ body {
     /* Altezza del video a 60% della viewport */
     overflow: hidden;
     margin-bottom: 2rem;
-    background-size: cover;
 }
 
 .video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
-    /* Rimuovi pointer-events: none; se non necessario */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 /* Overlay styling */
@@ -54,7 +53,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
  
 .overlay-content {
     text-align: center;
