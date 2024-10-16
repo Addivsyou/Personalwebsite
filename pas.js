@@ -9,8 +9,8 @@ document.getElementById("bottone").addEventListener("click", function () {
     if (hashedPassword === correctHashedPassword) {
 
         const link = document.createElement('a');
-        link.href = 'https://drive.google.com/uc?export=download&id=13Gvve7vvckjpIjvr_IPawZj5h6JyZqbd';
-        link.download = 'CV.pdf';
+        link.href = 'https://drive.google.com/file/d/1EY3SBLv7uu_Wlq6oKzovlr2aVz0yjJ1S/view?usp=drive_link';
+        link.download = 'CV Adnan.pdf';
         link.click();
     } else {
 
