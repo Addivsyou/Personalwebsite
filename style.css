@@ -20,6 +20,7 @@ body {
 }
 
 /* Video background and container */
+/* Video background and container */
 .video-container {
     position: relative;
     width: 100%;
@@ -52,7 +53,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
  
 .overlay-content {
     text-align: center;
